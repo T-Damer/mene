@@ -1,8 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  basePath: "/mene",
-  assetPrefix: "/mene/",
-};
+  basePath: '/mene',
+  assetPrefix: '/mene/',
+}
 
-export default nextConfig;
+export default nextConfig
