@@ -2,13 +2,14 @@
 
 import Image from 'next/image'
 import Logo from '../public/logo.svg'
-import { useUserDataStore } from '@/stores/UserData'
 import { redirect } from 'next/navigation'
+import { useAtomValue } from 'jotai'
+import { appStateAtom } from '@/stores/userAtom'
 
 export default function Home() {
-  const { didOnboard } = useUserDataStore()
+  const { onboarding } = useAtomValue(appStateAtom)
 
-  if (!didOnboard) redirect('/onboarding')
+  if (!onboarding.didOnboard) redirect('/onboarding')
 
   return (
     <div className="flex flex-col gap-8 row-start-2 items-center justify-center">
