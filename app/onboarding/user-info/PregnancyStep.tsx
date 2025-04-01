@@ -1,11 +1,29 @@
+import { TogglerGroup } from '@/app/TogglerGroup'
 import { Button } from '@/components/ui/button'
+import { ToggleGroup } from '@/components/ui/toggle-group'
 import { StepComponentProps } from '@/stores/onboardingComponents'
+import { PregnancyState } from '@/stores/userAtom'
 
-export default function PregnancyStep({ onContinue }: StepComponentProps) {
+export default function PregnancyStep({
+  value,
+  onChange,
+  onContinue,
+}: StepComponentProps) {
+  const togglerItems = Object.values(PregnancyState)
+    .filter((value) => typeof value === 'string')
+    .map((value) => ({ value }))
+
   return (
-    <div>
-      <span>Беременность</span>
-      <Button onClick={onContinue}>Далее</Button>
-    </div>
+    <>
+      <span>Вы беременны? ☺️</span>
+      <TogglerGroup
+        items={togglerItems}
+        value={value}
+        onValueChange={onChange}
+      />
+      <Button onClick={onContinue} disabled={!value}>
+        Далее
+      </Button>
+    </>
   )
 }

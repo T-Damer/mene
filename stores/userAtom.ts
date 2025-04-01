@@ -1,9 +1,9 @@
 import persistedAtom from './persistedAtom'
 
-enum PregnancyState {
-  no,
-  yes,
-  willing,
+export enum PregnancyState {
+  no = 'Нет',
+  yes = 'Да',
+  willing = 'Планирую',
 }
 
 type FiveStars = 1 | 2 | 3 | 4 | 5
