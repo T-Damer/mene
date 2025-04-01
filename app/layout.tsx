@@ -9,7 +9,10 @@ export default function RootLayout({
     <html lang="en">
       <head key="main-head">
         <meta name="apple-mobile-web-app-title" content="mene" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
         <title>mene</title>
         <meta name="description" content="Track your period and be healthy" />
         <meta property="og:url" content="https://t-damer.github.io/mene" />

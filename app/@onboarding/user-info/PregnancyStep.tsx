@@ -1,4 +1,4 @@
-import { TogglerGroup } from '@/app/TogglerGroup'
+import { TogglerGroup } from '@/components/TogglerGroup'
 import { Button } from '@/components/ui/button'
 import { StepComponentProps } from '@/stores/onboardingComponents'
 import { PregnancyState } from '@/stores/userAtom'
