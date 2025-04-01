@@ -1,6 +1,5 @@
 import { TogglerGroup } from '@/app/TogglerGroup'
 import { Button } from '@/components/ui/button'
-import { ToggleGroup } from '@/components/ui/toggle-group'
 import { StepComponentProps } from '@/stores/onboardingComponents'
 import { PregnancyState } from '@/stores/userAtom'
 

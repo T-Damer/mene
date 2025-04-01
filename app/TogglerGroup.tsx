@@ -19,6 +19,7 @@ export function TogglerGroup({
     >
       {items.map((item) => (
         <ToggleGroupItem
+          key={item.value}
           value={item.value}
           aria-label={item.label}
           className="h-8 w-fit"

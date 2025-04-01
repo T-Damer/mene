@@ -16,7 +16,7 @@ export default function Onboarding() {
       {
         <CurrentStepComponent
           value={state.userData[currentStep]}
-          onChange={(value: any) => updateUserData(currentStep, value)}
+          onChange={(value) => updateUserData(currentStep, value)}
           onContinue={moveToNextStep}
         />
       }
