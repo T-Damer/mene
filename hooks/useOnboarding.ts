@@ -1,4 +1,4 @@
-import { STEP_COMPONENTS } from '@/stores/onboardingComponents'
+import { STEP_COMPONENTS, StepKey } from '@/stores/onboardingComponents'
 import {
   appStateAtom,
   migrateStoredData,
@@ -41,11 +41,26 @@ export function useOnboarding() {
       )
       const nextIndex = Math.min(currentIndex + 1, ONBOARDING_STEPS.length - 1)
 
+      const isLastStep = nextIndex === ONBOARDING_STEPS.length - 1
+      const isMovingBeyondLastStep =
+        currentIndex === ONBOARDING_STEPS.length - 1
+
+      if (isMovingBeyondLastStep) {
+        return {
+          ...prevState,
+          onboarding: {
+            ...prevState.onboarding,
+            didOnboard: true,
+          },
+        }
+      }
+
       return {
         ...prevState,
         onboarding: {
           ...prevState.onboarding,
           currentStep: ONBOARDING_STEPS[nextIndex],
+          didOnboard: isLastStep ? true : prevState.onboarding.didOnboard,
         },
       }
     })
@@ -74,5 +89,9 @@ export function useOnboarding() {
     completeOnboarding,
     currentStep,
     CurrentStepComponent,
+    isComplete: (step: StepKey) =>
+      migratedState.onboarding.completedSteps.includes(step),
+    isLastStep: () =>
+      currentStep === ONBOARDING_STEPS[ONBOARDING_STEPS.length - 1],
   }
 }

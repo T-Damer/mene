@@ -10,7 +10,9 @@ export default function Spinner({
 }) {
   return (
     <div
-      className={fullScreen ? 'flex items-center justify-center h-screen' : ''}
+      className={
+        fullScreen ? 'flex items-center justify-center h-[100dvh]' : ''
+      }
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

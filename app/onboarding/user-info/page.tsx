@@ -17,7 +17,7 @@ export default function Onboarding() {
   }
 
   return (
-    <div className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col gap-4 items-center justify-center">
       {
         <CurrentStepComponent
           value={state.userData[currentStep]}

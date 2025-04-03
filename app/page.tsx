@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col gap-8 items-center justify-center min-h-screen">
+    <div className="flex flex-col gap-8 items-center min-h-screen">
       {onboarding.didOnboard ? <Main /> : <Onboarding />}
     </div>
   )

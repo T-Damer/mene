@@ -43,7 +43,7 @@ export default function RootLayout({
         />
         <meta name="twitter:creator" content="@True_Damer" />
       </head>
-      <body className="flex flex-col container prose print:w-full min-h-[100dvh] mx-auto px-5 md:p-10">
+      <body className="flex flex-col container prose print:w-full min-h-[100dvh] mx-auto px-5">
         {children}
       </body>
     </html>
