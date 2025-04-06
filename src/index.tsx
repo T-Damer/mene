@@ -1,5 +1,6 @@
-import 'index.css'
-import { render } from 'preact'
-import App from 'App'
+import App from '@/App'
+import ReactDOM from 'react-dom/client'
+import './index.css'
 
-render(<App />, document.getElementById('root') as Element)
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+root.render(<App />)
