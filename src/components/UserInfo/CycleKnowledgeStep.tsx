@@ -1,4 +1,4 @@
-import { StepComponentProps } from '@/stores/onboardingComponents'
+import { StepComponentProps } from '@/atoms/onboardingComponents'
 
 export default function CycleKnowledgeStep({ onContinue }: StepComponentProps) {
   return <div onClick={onContinue}>4</div>

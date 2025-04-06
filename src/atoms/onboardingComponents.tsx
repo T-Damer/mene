@@ -1,6 +1,4 @@
 import BirthDateStep from '@/components/UserInfo/BirthDateStep'
-import { ComponentType } from 'react'
-import PregnancyStep from '@/components/UserInfo/PregnancyStep'
 import ContraceptionTypeStep from '@/components/UserInfo/ContraceptionTypeStep'
 import CycleAffectsDietStep from '@/components/UserInfo/CycleAffectsDietStep'
 import CycleAffectsMentalityStep from '@/components/UserInfo/CycleAffectsMentalityStep'
@@ -14,9 +12,11 @@ import CycleRelationshipStep from '@/components/UserInfo/CycleRelationshipStep'
 import EnhanceLifeStep from '@/components/UserInfo/EnhanceLifeStep'
 import HeightStep from '@/components/UserInfo/HeightStep'
 import IllnessesStep from '@/components/UserInfo/IllnessesStep'
+import PregnancyStep from '@/components/UserInfo/PregnancyStep'
 import TodaysFeelingStep from '@/components/UserInfo/TodaysFeelingStep'
 import WeightStep from '@/components/UserInfo/WeightStep'
 import { UserStoreKeys } from '@/types/AppStates'
+import { ComponentType } from 'react'
 
 export interface StepComponentProps {
   value: any
@@ -24,7 +24,7 @@ export interface StepComponentProps {
   onContinue: () => void
 }
 
-export const STEP_COMPONENTS: Record<
+export const stepComponents: Record<
   UserStoreKeys,
   ComponentType<StepComponentProps>
 > = {

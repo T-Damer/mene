@@ -1,8 +1,8 @@
 import {
-  UserStoreKeys,
-  UserStore,
   AppState,
   onboardingSteps,
+  UserStore,
+  UserStoreKeys,
 } from '@/types/AppStates'
 import persistedAtom from './persistedAtom'
 
@@ -29,7 +29,7 @@ export function migrateStoredData(storedData: any): AppState {
 
     for (const step of onboardingSteps) {
       if (step in storedData && storedData[step] !== undefined) {
-        userData[step] = storedData[step]
+        userData[step] = storedData[step] as never
         completedSteps.push(step)
       }
     }

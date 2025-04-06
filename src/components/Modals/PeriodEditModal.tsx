@@ -1,8 +1,6 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import { format } from 'date-fns'
 import { useCycleTracker } from '@/hooks/useCycleTracking'
+import { format } from 'date-fns'
+import { useEffect, useState } from 'react'
 
 interface PeriodEditModalProps {
   isOpen: boolean

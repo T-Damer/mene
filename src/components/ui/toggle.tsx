@@ -1,5 +1,3 @@
-'use client'
-
 import { cn } from '@/helpers/utils'
 import * as TogglePrimitive from '@radix-ui/react-toggle'
 import { cva, type VariantProps } from 'class-variance-authority'

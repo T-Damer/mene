@@ -30,7 +30,6 @@ export default function HorizontalDates({
   // Scroll to today when calendar mounts
   useEffect(() => {
     if (scrollRef.current) {
-      // Find today's element
       const todayElement = scrollRef.current.querySelector(
         '.calendar-day-today'
       )

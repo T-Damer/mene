@@ -1,6 +1,6 @@
+import { StepComponentProps } from '@/atoms/onboardingComponents'
 import { Button } from '@/components/ui/button'
 import { BirthDatePicker } from './BirthDatePicker'
-import { StepComponentProps } from '@/stores/onboardingComponents'
 
 export default function BirthDateStep({
   value,
@@ -12,10 +12,7 @@ export default function BirthDateStep({
       <span>
         Выбери дату рождения, чтобы мы могли подстроить рекомендации под тебя
       </span>
-      <BirthDatePicker
-        initialDate={value}
-        onChange={(date) => onChange(date.getTime())}
-      />
+      <BirthDatePicker onChange={onChange} />
       <Button
         onClick={onContinue}
         disabled={

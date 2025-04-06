@@ -1,10 +1,10 @@
-import { atom } from 'jotai'
-import persistedAtom from './persistedAtom'
 import {
-  MenstrualCycle,
   CycleCalculations,
+  MenstrualCycle,
   UserCycleData,
 } from '@/types/Period'
+import { atom } from 'jotai'
+import persistedAtom from './persistedAtom'
 
 export function calculateCycleData(
   cycles: MenstrualCycle[]
@@ -105,18 +105,14 @@ export const cycleDataAtom = persistedAtom<UserCycleData>('cycle-data', {
   lastUpdated: new Date(),
 })
 
-// Derived atom for calendar data
 export const calendarDataAtom = atom((get) => {
   const cycleData = get(cycleDataAtom)
 
-  // Generate 3 months of calendar data (past, present, future)
+  // Generate month of calendar data (past, present, future)
   const today = new Date()
 
-  // Start from beginning of 2 months ago
-  const startDate = new Date(today.getFullYear(), today.getMonth() - 2, 1)
-
-  // End at the end of next month
-  const endDate = new Date(today.getFullYear(), today.getMonth() + 2, 0)
+  const startDate = new Date(today.getFullYear(), today.getMonth(), 1)
+  const endDate = new Date(today.getFullYear(), today.getMonth() + 1, 0)
 
   const days: CalendarDay[] = []
 

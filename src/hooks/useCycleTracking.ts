@@ -1,12 +1,10 @@
-import { cycleDataAtom, calculateCycleData } from '@/atoms/periodStore'
+import { calculateCycleData, cycleDataAtom } from '@/atoms/periodStore'
 import { MenstrualCycle } from '@/types/Period'
 import { useAtom } from 'jotai'
 
-// Custom hook for cycle tracking functionality
 export function useCycleTracker() {
   const [cycleData, setCycleData] = useAtom(cycleDataAtom)
 
-  // Log a new period
   const logPeriod = (startDate: Date = new Date()) => {
     setCycleData((prevData) => {
       // Check if there's an ongoing period

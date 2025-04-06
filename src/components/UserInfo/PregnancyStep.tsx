@@ -1,6 +1,6 @@
+import { StepComponentProps } from '@/atoms/onboardingComponents'
 import { TogglerGroup } from '@/components/TogglerGroup'
 import { Button } from '@/components/ui/button'
-import { StepComponentProps } from '@/stores/onboardingComponents'
 import { PregnancyState } from '@/types/AppStates'
 
 export default function PregnancyStep({

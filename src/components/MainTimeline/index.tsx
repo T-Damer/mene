@@ -1,10 +1,8 @@
-'use client'
-
-import { useState } from 'react'
-import { format } from 'date-fns'
+import HorizontalDates from '@/components//Calendar/HorizontalDates'
+import LogPeriodModal from '@/components/Modals/LogPeriodModal'
 import { useCycleTracker } from '@/hooks/useCycleTracking'
-import HorizontalDates from '../Calendar/HorizontalDates'
-import LogPeriodModal from '../Modals/LogPeriodModal'
+import { format } from 'date-fns'
+import { useState } from 'react'
 
 export default function MainTimeline() {
   const {

@@ -1,4 +1,4 @@
-import { STEP_COMPONENTS } from '@/atoms/onboardingComponents'
+import { stepComponents } from '@/atoms/onboardingComponents'
 import {
   appStateAtom,
   getFirstIncompleteStep,
@@ -80,7 +80,7 @@ export function useOnboarding() {
     migratedState.onboarding.currentStep ||
     getFirstIncompleteStep(migratedState)
 
-  const CurrentStepComponent = STEP_COMPONENTS[currentStep]
+  const CurrentStepComponent = stepComponents[currentStep]
 
   return {
     state: migratedState,
